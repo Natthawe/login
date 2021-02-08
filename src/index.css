@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,171 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+input,button{
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #53565A;
+  
+}
+
+form, .welcome{
+  display: block;
+  position: relative;
+  
+}
+
+form:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -9px;
+  bottom: -9px;
+  right: -9px;
+  left: -9px;
+  z-index: 1;
+  background-image: linear-gradient(to bottom right, #00b7ff,#fe48fe);
+  border-radius: 20px;
+  
+}
+
+form .form-inner{
+  position: relative;
+  display: block;
+  background-color: #FFF;
+  padding: 5vh;
+  z-index: 2;
+  border-radius: 16px;  
+}
+
+form img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1vh;
+  /* border: 2px solid red; */
+}
+
+form .form-inner h2{
+  color: rgb(0, 195, 255);
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+form .form-inner .form-group{
+  display: block;
+  width: 50vh;
+  margin-bottom: 5vh;
+}
+
+.form-inner .form-group label{
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  transition: 0.4s;
+}
+
+.form-inner .form-group:focus-within label{
+  color:rgba(255, 0, 200, 0.9);
+}
+
+form .form-inner .form-group input{
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #F8f8f8;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+form .form-inner .form-group input:focus{
+  box-shadow: 0px 0px 3px rgba(0, 195, 255, 0.9);
+}
+
+form .form-inner input[type="submit"]{
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom right, #008cff,#fe48fe, #FFCE00);
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: #FFF;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid rgb(14, 126, 253);
+}
+
+form .form-inner input[type="submit"]:hover, .welcome button:hover{
+  background-position: 100% 0%;
+}
+
+.welcome{
+  height: 80.4vh;
+  width: 60vh;
+  /* max-width: 600px; */
+  border-radius: 25px;
+  position: relative;
+  display: block;
+  background-color: #FFF;
+  margin-top: 0;
+  padding: 5vh;
+  z-index: 2;
+  border-radius: 16px;
+  /* border: 2px solid red; */
+}
+
+.welcome h2{
+  color: rgb(0, 195, 255);
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 4vh;
+  margin-bottom: 30px;
+  text-align: center;
+  /* border: 2px solid red; */
+}
+.welcome h2 span{
+  color:rgba(17, 148, 255, 0.9);
+  font-weight: 900;
+}
+.welcome .btn{
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 8px;
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: #FFF;
+  font-weight: 700;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border: 1px solid rgb(14, 126, 253);
+  background-image: linear-gradient(to bottom right, #008cff,#fe48fe, #FFCE00);
 }
